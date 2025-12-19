@@ -62,6 +62,11 @@ jobs:
           # Cleanup separate builds
           rm -rf "build/bin/QuadCast RGB-arm64.app" "build/bin/QuadCast RGB-amd64.app"
 
+      - name: Sign app (ad-hoc)
+        run: |
+          # Ad-hoc signing to reduce some warnings
+          codesign --force --deep --sign - "build/bin/QuadCast RGB.app"
+          
       - name: Create ZIP archive
         run: |
           cd build/bin

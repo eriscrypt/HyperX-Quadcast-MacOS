@@ -29,7 +29,10 @@
 1. Download **QuadCast RGB.app** from [Releases](../../releases)
 2. Extract the archive
 3. Drag **QuadCast RGB** to the **Applications** folder
-4. Launch from Launchpad or Finder
+4. **Important**: Right-click on the app and select **Open** (or go to System Settings → Privacy & Security and click "Open Anyway")
+   - This is required because the app is not notarized by Apple
+   - You only need to do this once
+5. Launch from Launchpad or Finder
 
 ### Method 2: Build from source
 
@@ -118,6 +121,22 @@ The ready application will be in the \`build/bin/\` folder.
 - CSS3 - styling
 
 ## Troubleshooting
+
+### macOS blocks the app from opening
+
+If you see "macOS cannot verify the developer":
+
+**Option 1 (Easier):**
+1. Right-click (or Control+click) on the app
+2. Select **Open**
+3. Click **Open** in the dialog
+
+**Option 2:**
+1. Go to **System Settings** → **Privacy & Security**
+2. Scroll down and click **Open Anyway** next to the blocked app message
+3. Enter your password if prompted
+
+You only need to do this once per app.
 
 ### Error "quadcastrgb utility not found"
 
