@@ -19,8 +19,8 @@ func main() {
 	// Create application with options
 	err := wails.Run(&options.App{
 		Title:  "QuadCast RGB",
-		Width:  520,
-		Height: 680,
+		Width:  600,
+		Height: 400,
 		AssetServer: &assetserver.Options{
 			Assets: assets,
 		},

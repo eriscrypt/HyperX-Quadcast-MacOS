@@ -1,0 +1,9 @@
+@import 'tailwindcss';
+
+@theme {
+    --color-bg: #0d1117;
+}
+
+:root {
+    --wails-draggable: drag;
+}
