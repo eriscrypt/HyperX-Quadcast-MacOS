@@ -4,7 +4,7 @@
 
 set -e
 
-APP_NAME="quadcast-ui.app"
+APP_NAME="QuadCast RGB.app"
 APP_PATH="$(pwd)/build/bin/$APP_NAME"
 TARGET_PATH="/Applications/$APP_NAME"
 ICON_SCRIPT="$(pwd)/create_icon.sh"
@@ -24,14 +24,15 @@ echo "📦 Application found: $APP_PATH"
 # Generate icon
 echo "🎨 Creating application icon..."
 if [ -f "$ICON_SCRIPT" ]; then
-    TEMP_ICON="/tmp/quadcast_app_icon.icns"
-    "$ICON_SCRIPT" "$TEMP_ICON"
+    TEMP_DIR="/tmp/quadcast_install_icon"
+    mkdir -p "$TEMP_DIR"
+    "$ICON_SCRIPT" "$TEMP_DIR"
 
     # Embed icon in application
-    if [ -f "$TEMP_ICON" ]; then
-        cp "$TEMP_ICON" "$APP_PATH/Contents/Resources/iconfile.icns"
+    if [ -f "$TEMP_DIR/appicon.icns" ]; then
+        cp "$TEMP_DIR/appicon.icns" "$APP_PATH/Contents/Resources/iconfile.icns"
         echo "✅ Icon embedded in application"
-        rm -f "$TEMP_ICON"
+        rm -rf "$TEMP_DIR"
     fi
 else
     echo "⚠️  Icon creation script not found, using default icon"
