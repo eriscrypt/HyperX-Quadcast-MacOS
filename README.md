@@ -2,7 +2,7 @@
 
 <div align="center">
 
-**Beautiful application for controlling HyperX QuadCast RGB lighting on macOS**
+**Application for controlling HyperX QuadCast RGB lighting on macOS**
 
 ![macOS](https://img.shields.io/badge/macOS-10.13+-blue?logo=apple)
 ![ARM64](https://img.shields.io/badge/Apple_Silicon-Compatible-green?logo=apple)
@@ -14,11 +14,9 @@
 
 - ✅ **Automatic dependency installation** - app will install everything needed
 - 💾 **Settings persistence** - your favorite color is remembered
-- 🎨 **Beautiful interface** - gradient design with smooth animations
 - 🖌️ **Color Picker** - choose any color from the palette
 - 🎯 **Presets** - quick selection of popular colors
-- 💡 **Turn off LED** - with one click
-- 🔍 **USB debugging** - device information
+- 💡 **Turn on/off LED** - with one click
 - 🍎 **Native macOS** - works like a real Mac application
 - 🎭 **Custom icon** - automatically generated during installation
 
